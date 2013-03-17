@@ -30,24 +30,24 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
         #"ifstat_sys 30 255" \
         # "lan_ip 105 221 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
         # "wan_ip 105 221" \
-        "vcs_branch 29 88" \
+        "vcs_branch 29 221" \
         "vcs_compare 60 255" \
         "vcs_staged 64 255" \
         "vcs_modified 9 255" \
-        "vcs_others 245 0" \
+        "vcs_others 245 221" \
     )
 fi
 
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
     TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
         #"earthquake 3 0" \
-        "mailcount 9 255" \
-        "now_playing 234 37" \
+        # "mailcount 9 255" \
+        # "now_playing 234 37" \
         #"cpu 240 136" \
-        "load 105 221" \
+        # "load 105 221" \
         #"tmux_mem_cpu_load 234 136" \
-        "battery 99 221" \
-        "weather 99 221" \
+        # "battery 99 221" \
+        # "weather 99 221" \
         #"rainbarf 0 0" \
         #"xkb_layout 125 117" \
         "date_day 98 221" \
