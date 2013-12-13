@@ -1,7 +1,15 @@
-#!/bin/sh
-basedir=`dirname $0`
+#!/bin/bash
+FILES=(".tmux-powerlinerc" ".tmux.conf" ".zshrc" "tmux-powerline/themes/clarity.sh")
 
-ln -s "${basedir}/.tmux-powerlinerc" ~/.tmux-powerlinerc
-ln -s "${basedir}/.tmux.conf"        ~/.tmux.conf
-ln -s "${basedir}/.zshrc"            ~/.zshrc
-ln -s "${basedir}/clarity.sh"        ~/tmux-powerline/themes/clarity.sh
+(cd `dirname $0`
+ PWD=`pwd`
+ for FILE in ${FILES[@]}; do
+     TO=$PWD/$FILE
+     FROM=~/$FILE
+     if [ -f $FROM ]; then
+         echo "${FROM} already exists."
+     else
+         echo "${FROM} -> ${TO}"
+         ln -s $TO $FROM
+     fi
+ done)
