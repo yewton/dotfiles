@@ -1,0 +1,21 @@
+# -*- mode: shell-script; -*-
+export PATH=/usr/kerberos/bin:/usr/lib/ccache:/usr/local/bin:/bin
+export SVN_SHOW_BRANCH="true"
+# history
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=$HOME/.zhistory
+# default mask
+umask 0002
+export EDITOR=~/bin/edit
+export SVN_EDITOR=~/bin/edit
+export LANG=ja_JP.UTF-8
+
+# !! IMPORTANT !!
+autoload -U compinit
+compinit -u
+
+alias zcomclean='rm -f ~/.zcompdump; compinit'
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
