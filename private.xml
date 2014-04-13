@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>INTELLIJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+  </appdef>
+  <appdef>
+    <appname>TEXTUAL</appname>
+    <equal>com.codeux.irc.textual</equal>
+  </appdef>
+  <replacementdef>
+    <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+    <replacementvalue>
+      ECLIPSE,
+      EMACS,
+      REMOTEDESKTOPCONNECTION,
+      TERMINAL,
+      VI,
+      VIRTUALMACHINE,
+      X11,
+      INTELLIJ
+    </replacementvalue>
+  </replacementdef>
+  <item>
+    <name>My Emacs Mode</name>
+    <item>
+      <name>Control+A to Command+Left(except for Firefox)</name>
+      <identifier>option.myemacsmode_controlA</identifier>
+      <not>{{EMACS_MODE_IGNORE_APPS}}, FIREFOX</not>
+      <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+    </item>
+    <item>
+      <name>Control+E to Command+Right</name>
+      <identifier>option.myemacsmode_controlE</identifier>
+      <not>{{EMACS_MODE_IGNORE_APPS}}</not>
+      <autogen>__KeyToKey__ KeyCode::E, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+    </item>
+  </item>
+  <item>
+    <name>My Textual Mode</name>
+    <item>
+      <name>Control+Return to Control+Enter</name>
+      <identifier>option.mytextualmode_controlReturn</identifier>
+      <only>TEXTUAL</only>
+      <autogen>__KeyToKey__ KeyCode::RETURN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::ENTER, ModifierFlag::CONTROL_L</autogen>
+    </item>
+  </item>
+</root>
