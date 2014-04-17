@@ -25,9 +25,8 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
     TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
         "tmux_session_info 98 221" \
         "hostname 99 221" \
-        "pwd 105 221" \
-        #"ifstat 30 255" \
-        #"ifstat_sys 30 255" \
+        # "ifstat 30 255" \
+        # "ifstat_sys 30 255" \
         # "lan_ip 105 221 ${TMUX_POWERLINE_SEPARATOR_RIGHT_THIN}" \
         # "wan_ip 105 221" \
         "vcs_branch 29 221" \
