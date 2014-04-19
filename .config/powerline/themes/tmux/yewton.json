@@ -1,0 +1,40 @@
+{
+  "default_module": "powerline.segments.common",
+  "segment_data": {
+	"date": {
+	  "before": "⌚  "
+	},
+    "internal_ip": {
+      "before": " ⓛ "
+    },
+    "external_ip": {
+      "before": " ⓦ "
+    }
+  },
+  "segments": {
+    "left": [
+	  {
+		"name": "hostname"
+	  },
+      {
+        "name": "internal_ip",
+        "module": "ext.tmux.segments.common"
+      },
+      {
+        "name": "external_ip",
+        "args": {
+          "query_url": "http://whatismyip.akamai.com/"
+        }
+      }
+    ],
+	"right": [
+      {
+        "name": "date",
+        "module": "ext.tmux.segments.common",
+        "args": {
+          "format": "%-m月%-d日(%a) %H:%M"
+        }
+      }
+	]
+  }
+}
