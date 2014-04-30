@@ -29,6 +29,9 @@
     ],
 	"right": [
       {
+        "name": "battery"
+      },
+      {
         "name": "date",
         "module": "ext.tmux.segments.common",
         "args": {
