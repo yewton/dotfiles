@@ -15,9 +15,10 @@ Config { font = "xft:Ricty Discord for Powerline:size=10:antialias=true"
     		    , Run Date "%_m月%_d日(%a) %H時%M分" "date" 30
                     , Run BatteryP ["BAT0"]
                       ["-t", "<acstatus><left>%"
-                      , "-L", "10", "-H", "80"
-                      , "-l", "red", "-h", "green"
-                      , "--", "-O", "<fc=green>+</fc>", "-o", "<fc=red>-</fc>" , "-i", ""
+                      , "-L", "20", "-H", "80", "-p", "3"
+                      , "-l", "red", "-n", "yellow", "-h", "green"
+                      , "--", "-O", "<fc=green>+</fc>", "-o", "<fc=red>-</fc>", "-i", ""
+                      , "-f", "ADP0/online"
                       ]
                       10
                     , Run StdinReader
