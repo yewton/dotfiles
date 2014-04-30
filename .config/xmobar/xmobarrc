@@ -1,0 +1,27 @@
+-- -*- mode: haskell; -*-
+Config { font = "xft:Ricty Discord for Powerline:size=10:antialias=true"
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = Top
+       , lowerOnStart = True
+       , persistent = False
+       , hideOnStart = False
+       , commands = [ Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 30
+                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 30
+                    , Run Memory ["-t","Mem: <usedratio>%"] 30
+                    , Run Swap [] 30
+    		    , Run Date "%_m月%_d日(%a) %H時%M分" "date" 30
+                    , Run BatteryP ["BAT0"]
+                      ["-t", "<acstatus><left>%"
+                      , "-L", "10", "-H", "80"
+                      , "-l", "red", "-h", "green"
+                      , "--", "-O", "<fc=green>+</fc>", "-o", "<fc=red>-</fc>" , "-i", ""
+                      ]
+                      100
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%cpu% | %memory% * %swap% | %wlan0% }{ <fc=#ee9a00>%date%</fc> | %battery%"
+       }
