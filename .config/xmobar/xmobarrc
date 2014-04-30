@@ -19,9 +19,10 @@ Config { font = "xft:Ricty Discord for Powerline:size=10:antialias=true"
                       , "-l", "red", "-h", "green"
                       , "--", "-O", "<fc=green>+</fc>", "-o", "<fc=red>-</fc>" , "-i", ""
                       ]
-                      100
+                      10
+                    , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %wlan0% }{ <fc=#ee9a00>%date%</fc> | %battery%"
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %wlan0% | <fc=#ee9a00>%date%</fc> | %battery%"
        }

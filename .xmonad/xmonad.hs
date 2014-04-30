@@ -1,5 +1,7 @@
 import qualified Data.Map as M
 
+
+import System.IO
 import XMonad
 import qualified XMonad.StackSet as W
 
@@ -36,7 +38,12 @@ main = do
                         className =? "Gimp"    --> doFloat,
                         title     =? "Speedbar" --> doFloat,
                         title     =? "Adobe Reader" --> doFloat]
-       , logHook = ewmhDesktopsLogHook
+       , logHook = do
+                        ewmhDesktopsLogHook
+                        dynamicLogWithPP $ xmobarPP
+                            { ppOutput = hPutStrLn xmproc
+                            , ppTitle = xmobarColor "green" "" . shorten 40
+                            }
        , workspaces = works
        , modMask = modm }
        `additionalKeys`
