@@ -5,6 +5,10 @@
     <equal>com.jetbrains.intellij</equal>
   </appdef>
   <appdef>
+    <appname>MSRDC</appname>
+    <equal>com.microsoft.rdc.mac</equal>
+  </appdef>
+  <appdef>
     <appname>TEXTUAL</appname>
     <equal>com.codeux.irc.textual</equal>
   </appdef>
@@ -18,7 +22,8 @@
       VI,
       VIRTUALMACHINE,
       X11,
-      INTELLIJ
+      INTELLIJ,
+      MSRDC
     </replacementvalue>
   </replacementdef>
   <item>
