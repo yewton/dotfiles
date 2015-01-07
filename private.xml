@@ -44,6 +44,12 @@
       <not>{{EMACS_MODE_IGNORE_APPS}}</not>
       <autogen>__KeyToKey__ KeyCode::E, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
     </item>
+    <item>
+      <name>Command+` to Control+`</name>
+      <identifier>option.myemacsmode_commandBackquote</identifier>
+      <only>EMACS</only>
+      <autogen>__KeyToKey__ KeyCode::BACKQUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::BACKQUOTE, ModifierFlag::CONTROL_L</autogen>
+    </item>
   </item>
   <item>
     <name>My Textual Mode</name>
