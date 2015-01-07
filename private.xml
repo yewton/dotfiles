@@ -12,6 +12,10 @@
     <appname>TEXTUAL</appname>
     <equal>com.codeux.irc.textual</equal>
   </appdef>
+  <appdef>
+    <appname>TEXTUAL5</appname>
+    <equal>com.codeux.irc.textual5</equal>
+  </appdef>
   <replacementdef>
     <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
     <replacementvalue>
@@ -46,7 +50,7 @@
     <item>
       <name>Control+Return to Control+Enter</name>
       <identifier>option.mytextualmode_controlReturn</identifier>
-      <only>TEXTUAL</only>
+      <only>TEXTUAL,TEXTUAL5</only>
       <autogen>__KeyToKey__ KeyCode::RETURN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::ENTER, ModifierFlag::CONTROL_L</autogen>
     </item>
   </item>
