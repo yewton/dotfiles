@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES=(".pydistutils.cfg" ".tmux.conf" ".zshrc" ".config/powerline")
+FILES=(".pydistutils.cfg" ".tmux.conf" ".zshrc" ".config/powerline" ".gemrc")
 
 (
     cd `dirname $0`
