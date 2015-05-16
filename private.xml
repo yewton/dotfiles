@@ -16,6 +16,10 @@
     <appname>TEXTUAL5</appname>
     <equal>com.codeux.irc.textual5</equal>
   </appdef>
+  <appdef>
+    <appname>SCREENSHARING</appname>
+    <equal>com.apple.ScreenSharing</equal>
+  </appdef>
   <replacementdef>
     <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
     <replacementvalue>
@@ -27,7 +31,8 @@
       VIRTUALMACHINE,
       X11,
       INTELLIJ,
-      MSRDC
+      MSRDC,
+      SCREENSHARING
     </replacementvalue>
   </replacementdef>
   <item>
