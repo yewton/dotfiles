@@ -1,13 +1,26 @@
 {
+  "dividers": {
+    "left": {
+      "hard": "⮀ ",
+      "soft": "⮁ "
+    },
+    "right": {
+      "hard": " ⮂",
+      "soft": " ⮃"
+    }
+  },
   "segment_data": {
     "date": {
-      "before": "⌚  "
+      "before": "⏰  "
     },
     "internal_ip": {
       "before": " ⓛ "
     },
     "external_ip": {
       "before": " ⓦ "
+    },
+    "powerline.segments.common.net.hostname": {
+      "before": "⭤ "
     }
   },
   "segments": {
